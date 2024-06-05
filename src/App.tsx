@@ -1,9 +1,10 @@
+import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <>
-      Todo app
+      <Navbar />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
