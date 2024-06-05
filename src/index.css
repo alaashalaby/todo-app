@@ -4,4 +4,10 @@
 
 body{
     font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background-color: #FEFAFB;
+}
+:is(button, input,select):focus{
+    outline: none;
+    border: none;
 }
