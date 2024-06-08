@@ -11,6 +11,7 @@ const getTodosFromLocalStorage = (): Todo[] => {
 const initialState = {
   todos: getTodosFromLocalStorage() as Todo[],
   filter: "All",
+  searchQuery:""
 };
 const todoSlice = createSlice({
   name: "todos",
@@ -45,10 +46,19 @@ const todoSlice = createSlice({
     setFilter: (state, action: PayloadAction<string>) => {
       state.filter = action.payload;
     },
+    setSearchQuery: (state, action:PayloadAction<string>) => {
+      state.searchQuery = action.payload;
+    }
   },
 });
 
-export const { addTodo, deleteTodo, updateTodo, toggleTodo, setFilter } =
-  todoSlice.actions;
+export const {
+  addTodo,
+  deleteTodo,
+  updateTodo,
+  toggleTodo,
+  setFilter,
+  setSearchQuery,
+} = todoSlice.actions;
 const todoReducer = todoSlice.reducer;
 export default todoReducer;
