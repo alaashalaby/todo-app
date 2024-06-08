@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useAppSelector } from "../app/hooks";
 import Todo from "./Todo";
+import { BiSad } from "react-icons/bi";
 const TodoList = () => {
   const todos = useAppSelector((state) => state.todoReducer.todos);
   const filter = useAppSelector((state) => state.todoReducer.filter);
@@ -32,7 +33,7 @@ const TodoList = () => {
           ))
         ) : (
           <div className="flex items-center justify-center text-[#D72C63] text-3xl my-8">
-            No Matches!! :(
+            No Matches!! <BiSad className="ms-2"/>
           </div>
         )}
       </AnimatePresence>
