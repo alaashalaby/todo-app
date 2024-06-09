@@ -7,7 +7,8 @@ body{
     height: 100vh;
     background-color: #FEFAFB;
 }
-:is(button, input,select):focus{
+/* :is(input):focus{
     outline: none;
     border: none;
-}
+} */
+
