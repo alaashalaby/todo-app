@@ -35,7 +35,7 @@ const AddTodo = () => {
     <>
       <div className="rounded p-5 max-w-2xl mx-auto">
         <form
-          className="flex items-center gap-2 mb-4"
+          className="flex gap-2 mb-4 flex-col md:flex-row"
           onSubmit={(e) => e.preventDefault()}
         >
           <input
@@ -46,7 +46,7 @@ const AddTodo = () => {
             className="outline-none p-2 flex-grow border border-[#D72C63] rounded"
           />
           <button
-            className="bg-[#D72c63] text-white p-2 rounded"
+            className="bg-[#D72c63] text-white p-2 rounded flex items-center justify-center"
             type="submit"
             onClick={handleAddTodo}
           >
