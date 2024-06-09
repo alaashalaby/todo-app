@@ -24,7 +24,7 @@ const UpdateTodo = ({
     inpRef.current?.focus();
   }, []);
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex gap-2 flex-col md:flex-row w-full">
       <input
         ref={inpRef}
         type="text"
