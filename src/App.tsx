@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <main className="pt-28 container mx-auto">
+      <main className="pt-32 container mx-auto">
         <MainContent />
       </main>
     </>
