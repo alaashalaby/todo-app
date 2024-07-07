@@ -2,7 +2,8 @@
 
 This is a Todo App built with React, Redux Toolkit, TypeScript, and Tailwind CSS. The app allows users to add, update, delete, filter, and search todos.
 
-![Todo](https://github.com/alaashalaby/todo-app/assets/80048047/290dcfe8-12c4-46f2-8a38-e9286f7d7cdc)
+![Todo App](https://github.com/alaashalaby/todo-app/assets/80048047/386ac480-066c-4070-90aa-c9b0e9bda9df)
+
 
 
 ## Features
