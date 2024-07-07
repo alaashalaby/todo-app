@@ -1,34 +1,56 @@
 import { BiPlus } from "react-icons/bi";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { addTodo } from "../rtk/features/todos/todoSlice";
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import { Slide, toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CategoriesSelect from "./CategoriesSelect";
 const AddTodo = () => {
   const [title, setTitle] = useState("");
+  const [selectedCategoryName, setSelectedCategoryName] = useState("");
+  const categories = useAppSelector(
+    (state) => state.categoriesReducer.categories
+  );
+  const selectedCategory = categories.find(
+    (category) => category.name === selectedCategoryName
+  );
   const dispatch = useAppDispatch();
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
   };
+  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCategoryName(e.target.value);
+  };
   const handleAddTodo = () => {
-    if (title.trim() === "") {
+    if (!title.trim()) {
       toast.error("Please Enter Todo Title !", {
         position: "top-center",
       });
-    } else {
-      dispatch(
-        addTodo({
-          title,
-          id: nanoid(),
-          isCompleted: false,
-        })
-      );
-      toast.success("Your Todo Added!", {
+      return;
+    }
+    if (!selectedCategoryName) {
+      toast.error("Please Select A Category !", {
         position: "top-center",
       });
-      setTitle("");
+      return;
+    } else {
+      if (selectedCategory) {
+        dispatch(
+          addTodo({
+            title,
+            id: nanoid(),
+            isCompleted: false,
+            category: selectedCategory,
+          })
+        );
+        toast.success("Your Todo Added!", {
+          position: "top-center",
+        });
+        setTitle("");
+        setSelectedCategoryName("");
+      }
     }
   };
   return (
@@ -54,6 +76,10 @@ const AddTodo = () => {
           </button>
         </form>
       </div>
+      <CategoriesSelect
+        selectedCategoryName={selectedCategoryName}
+        handleCategoryChange={handleCategoryChange}
+      />
       <ToastContainer transition={Slide} autoClose={2000} />
     </>
   );
