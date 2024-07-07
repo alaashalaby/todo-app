@@ -17,7 +17,7 @@ const TodoList = () => {
     return matchFilter && matchSearchQuery;
   });
   return (
-    <ul className="flex flex-col gap-4 max-w-2xl mx-auto">
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
       <AnimatePresence>
         {filterTodos.length > 0 ? (
           filterTodos.map((todo) => (
