@@ -2,6 +2,7 @@ interface Todo {
   title: string;
   id: string;
   isCompleted: boolean;
+  time: string;
   category:Category
 }
 interface TodosProps {
