@@ -8,9 +8,9 @@ const FilterTodos = () => {
     dispatch(setFilter(e.target.value));
   };
   return (
-    <div className="flex items-center justify-center mb-5">
+    <div className="mb-5">
       <select
-        className="border border-[#0D0508] outline-none rounded cursor-pointer py-1 text-[#0D0508]"
+        className="w-full border border-[#D72C63] outline-none rounded cursor-pointer py-1 text-[#0D0508]"
         value={filter}
         onChange={handleChangeFilter}
       >
