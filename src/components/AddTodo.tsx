@@ -42,6 +42,7 @@ const AddTodo = () => {
             title,
             id: nanoid(),
             isCompleted: false,
+            time:new Date().toISOString(),
             category: selectedCategory,
           })
         );
