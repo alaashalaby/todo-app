@@ -8,7 +8,7 @@ const Navbar = () => {
     setIsSearchBarVisible(!isSearchBarVisible);
   };
   return (
-    <header className="fixed top-0 left-0 z-50 shadow-sm w-full">
+    <header className="fixed top-0 left-0 z-50 shadow-md md:shadow-sm w-full">
       <div className="container mx-auto flex justify-between items-center p-2 relative">
         <img src={logo} alt="todo logo" className="w-16" />
         <nav>
