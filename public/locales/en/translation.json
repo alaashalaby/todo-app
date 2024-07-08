@@ -1,4 +1,19 @@
 {
     "English": "English",
-    "Arabic": "Arabic"
+    "Arabic": "Arabic",
+    "title": "Add Todo",
+    "placeholder": "Enter Todo Title",
+    "addBtn": "Add Todo",
+    "categories":{
+        "work": "work",
+        "home": "home",
+        "shopping": "shopping",
+        "personal": "personal"
+    },
+    "categoryTitle": "Select Category",
+    "filter":{
+        "All":"All",
+        "uncompleted":"Uncompleted",
+        "completed":"Completed"
+    }
 }

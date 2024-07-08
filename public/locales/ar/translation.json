@@ -1,4 +1,19 @@
 {
     "English": "الانجليزية",
-    "Arabic": "العربية"
+    "Arabic": "العربية",
+    "title": "أدخل المهمه",
+    "placeholder": "ادخل عنوان المهمه",
+    "addBtn": "أضف المهمه",
+    "categories": {
+        "work": "العمل",
+        "home": "المنزل",
+        "shopping": "التسوق",
+        "personal": "شخصي"
+    },
+    "categoryTitle": "أختر الفئة",
+    "filter":{
+        "All":"الكل",
+        "uncompleted":"غير مكتملة",
+        "completed":"مكتملة"
+    }
 }
