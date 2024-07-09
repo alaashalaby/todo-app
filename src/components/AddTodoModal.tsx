@@ -7,12 +7,14 @@ import CategoriesSelect from "./CategoriesSelect";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
 import { BiX } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 interface AddTodoModalProps {
   onClose: () => void;
 }
 const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
   const [title, setTitle] = useState("");
   const [selectedCategoryName, setSelectedCategoryName] = useState("");
+  const { t } = useTranslation();
   const categories = useAppSelector(
     (state) => state.categoriesReducer.categories
   );
@@ -75,7 +77,7 @@ const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
         className="bg-[#ffd6e2] p-5 w-full max-w-[95%] sm:max-w-[600px] z-40 rounded-lg fixed"
       >
         <div className="flex justify-between items-center mb-5">
-          <h2>Add Todo</h2>
+          <h2>{t("title")}</h2>
           <button
             onClick={onClose}
             className="bg-[#D72c63] text-white p-1 rounded-full"
@@ -90,7 +92,7 @@ const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
           >
             <input
               type="text"
-              placeholder="Enter Your Todo"
+              placeholder={t("placeholder")}
               value={title}
               onChange={handleTitleChange}
               className="outline-none p-2 flex-grow border border-[#D72C63] rounded"
@@ -104,7 +106,7 @@ const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
               type="submit"
               onClick={handleAddTodo}
             >
-              Add Todo
+              {t("addBtn")}
             </button>
           </form>
         </div>
