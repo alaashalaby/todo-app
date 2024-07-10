@@ -15,5 +15,7 @@
         "All":"All",
         "uncompleted":"Uncompleted",
         "completed":"Completed"
-    }
+    },
+    "emptyText":"You don’t have any Tasks",
+    "searchPlaceholder":"Search by Name"
 }

@@ -15,5 +15,7 @@
         "All":"الكل",
         "uncompleted":"غير مكتملة",
         "completed":"مكتملة"
-    }
+    },
+    "emptyText":"ليس لديك مهام متاحة",
+    "searchPlaceholder":"ابحث عن مهمة"
 }
