@@ -30,13 +30,13 @@ const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
   };
   const handleAddTodo = () => {
     if (!title.trim()) {
-      toast.error("Please Enter Todo Title !", {
+      toast.error(t("toast.toastMessageError"), {
         position: "top-center",
       });
       return;
     }
     if (!selectedCategoryName) {
-      toast.error("Please Select A Category !", {
+      toast.error(t("toast.toastMessageErrorCategory"), {
         position: "top-center",
       });
       return;
@@ -51,7 +51,7 @@ const AddTodoModal = ({ onClose }: AddTodoModalProps) => {
             category: selectedCategory,
           })
         );
-        toast.success("Your Todo Added!", {
+        toast.success(t("toast.toastMessageSuccess"), {
           position: "top-center",
         });
         setTitle("");
