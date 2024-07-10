@@ -17,5 +17,10 @@
         "completed":"Completed"
     },
     "emptyText":"You don’t have any Tasks",
-    "searchPlaceholder":"Search by Name"
+    "searchPlaceholder":"Search by Name",
+    "toast":{
+        "toastMessageSuccess":"Todo added successfully",
+        "toastMessageError":"Please Enter Todo Title !",
+        "toastMessageErrorCategory":"Please Select A Category !"
+    }
 }

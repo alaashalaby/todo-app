@@ -17,5 +17,10 @@
         "completed":"مكتملة"
     },
     "emptyText":"ليس لديك مهام متاحة",
-    "searchPlaceholder":"ابحث عن مهمة"
+    "toast":{
+        "searchPlaceholder":"ابحث عن مهمة",
+        "toastMessageSuccess":"تمت اضافة المهمه بنجاح",
+        "toastMessageError":"!الرجاء ادخال عنوان المهمه",
+        "toastMessageErrorCategory":"!الرجاء أختيار الفئة"
+    }
 }
